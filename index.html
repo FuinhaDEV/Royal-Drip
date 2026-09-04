@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Royal Drip</title>
+    <style>
+      .site-header {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 24px;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+      .header {
+        background-color: #003ac1;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+      }
+      .header-icons {
+        position: absolute;
+        top: 20px;
+        right: 24px;
+        display: flex;
+        gap: 16px;
+      }
+
+      .icon-link svg {
+        width: 24px;
+        height: 24px;
+        transition: opacity 0.2s;
+      }
+
+      .icon-link:hover svg {
+        opacity: 0.6;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff; /* Cor de fundo da página */
+        color: #000000;
+        margin: 20px;
+      }
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      div img {
+        width: 400px;
+        height: 300px;
+        border: 2px solid #33415c;
+        border-radius: 13px;
+        box-shadow: 4px 7px 0px #001233;
+        cursor: pointer;
+        margin: 10px;
+        transition: 400ms;
+      }
+      div img:hover {
+        filter: grayscale(1);
+        transform: scale(1.03);
+      }
+      /* Cores diferentes em seções para o toque visual */
+      #sobre {
+        background-color: #7d8597;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+      }
+
+      #lancamentos {
+        background-color: #7c1829;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+      }
+
+      #contato {
+        background-color: #5c677d;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+      }
+
+      /* Cabeçalho com logo centralizada */
+      .cabecalho {
+        text-align: center;
+      }
+
+      .cabecalho img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+      }
+
+      /* Galeria de imagens com espaçamento */
+      .galeria {
+        display: flex;
+        gap: 12px; /* espaço entre as imagens */
+        flex-wrap: wrap; /* quebra linha se não couber */
+        margin-bottom: 30px;
+        filter: drop-shadow(10px 0 30px #00174575);
+        margin-top: 20px;
+        transition: 0.5s;
+      }
+
+      .galeria img {
+        max-width: 100%;
+        display: block; /* remove espaço "fantasma" inline, mas ajuda a manter o gap consistente */
+        max-width: 150px; /* força o tamanho, em vez de deixar 100% do container */
+        height: auto;
+        filter: drop-shadow(10px 0 30px #02153876);
+        flex-wrap: wrap;
+        border-radius: 10px;
+        transition: 0.1s;
+      }
+
+      .galeria:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Cabeçalho principal com Nome, Slogan e Navegação -->
+    <header class="cabecalho">
+      <div class="header-icons">
+        <a href="/conta" aria-label="Minha conta" class="icon-link">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="black"
+            stroke-width="1.5"
+          >
+            <circle cx="12" cy="8" r="3.5" />
+            <path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6" />
+          </svg>
+        </a>
+
+        <a href="/carrinho" aria-label="Carrinho de compras" class="icon-link">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="black"
+            stroke-width="1.5"
+          >
+            <path d="M6 8h12l-1 12H7L6 8z" />
+            <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="logo">
+        <img
+          src="imagens/Logo Marca/Logo marca (1).jpeg"
+          width="125"
+          height="125"
+          alt="Royal_Drip"
+        />
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+      <!-- Seção 1: Produtos com 2 Articles -->
+      <section id="produtos">
+        <h2>Nossos Lançamentos</h2>
+
+        <article>
+          <h3>Camisetas Oversized Drop 01</h3>
+          <p>
+            Modelagem ampla com corte streetwear moderno e tecido de algodão
+            encorpado de 220g. Estampas em silk-screen, altorais e com
+            inspiração no RipRop, basquete e cultura periferica.
+          </p>
+          <div class="galeria">
+            <img
+              src="imagens/camisas/camisa 1.jpg"
+              width="150"
+              height="150"
+              alt="camisa_boxy_drop3"
+            />
+            <img
+              src="imagens/camisas/camisa 2.jpg"
+              width="150"
+              height="150"
+              alt="camisa_boxy_drop2"
+            />
+            <img
+              src="imagens/camisas/camisa 3.jpg"
+              width="150"
+              height="150"
+              alt="camisa_boxy_drop1"
+            />
+          </div>
+        </article>
+
+        <article>
+          <h3>Moletons Heavyweight & Cargo Pants</h3>
+          <p>
+            Moletons com capuz duplo, bolso canguru e costura reforçada para
+            dias frios. Acompanham nossas calças cargo funcionais com múltiplos
+            bolsos e ajuste no tornozelo.
+          </p>
+          <div class="galeria">
+            <img
+              src="imagens/blusas_Conjuntos/conjunto moletom cinza.jpg"
+              width="150"
+              height="150"
+              alt="conjunto_cinza_street_drop1"
+            />
+            <img
+              src="imagens/blusas_Conjuntos/USA.jpg"
+              width="150"
+              height="150"
+              alt="conjunto_UK_drop2"
+            />
+            <img
+              src="imagens/blusas_Conjuntos/conjunto branco copy.jpg"
+              width="150"
+              height="150"
+              alt="conjunto_branco_street_drop3"
+            />
+            <img
+              src="imagens/blusas_Conjuntos/conj2.jpg"
+              width="150"
+              height="150"
+              alt="conjunto_blue_street_drop4"
+            />
+            <img
+              src="imagens/blusas_Conjuntos/conj3.jpg"
+              width="150"
+              height="150"
+              alt="conjunto_camuflado_street_drop5"
+            />
+            <img
+              src="imagens/blusas_Conjuntos/conj4.jpg"
+              width="150"
+              height="150"
+              alt="conjunto_cimento_street_drop6"
+            />
+            <img
+              src="imagens/calcas/Calça Moletom.jpg"
+              width="150"
+              height="150"
+              alt="calca_moletom"
+            />
+            <img
+              src="imagens/calcas/calça branca.jpg"
+              width="150"
+              height="150"
+              alt="calca_moletom_branca"
+            />
+            <img
+              src="imagens/calcas/calça azul.jpg"
+              width="150"
+              height="150"
+              alt="calca_moletom_azul"
+            />
+            <img
+              src="imagens/calcas/Calça Rosa.jpg"
+              width="150"
+              height="150"
+              alt="calca_moletom_rosa"
+            />
+            <img
+              src="imagens/calcas/calça preta.jpg"
+              width="150"
+              height="150"
+              alt="calca_moletom_preta"
+            />
+            <img
+              src="imagens/calcas/calça cruz.jpg"
+              width="150"
+              height="150"
+              alt="calca_moletom_cruz"
+            />
+          </div>
+        </article>
+      </section>
+
+      <!-- Seção 2: Sobre -->
+      <section id="sobre">
+        <h2>Sobre a Royal Drip</h2>
+        <p>
+          Criada no coração do cenário urbano, a Feshion Modas nasceu para dar
+          voz à cultura das ruas através do vestuário e da personalidade de cada
+          um . Trabalhamos com tiragens limitadas e coleções exclusivas para
+          garantir originalidade e expressão individual em cada peça que você
+          veste.
+        </p>
+      </section>
+
+      <!-- Seção 3: Contato -->
+      <section id="contato">
+        <h2>Atendimento & Drops</h2>
+        <p>
+          Desejando tirar dúvidas sobre o tamanho ideal, envios ou ficar por
+          dentro do próximo drop exclusivo? Fale com a nossa equipe:
+        </p>
+        <ul>
+          <li><strong>E-mail:</strong> Royal.Drip@gmail.com</li>
+          <li><strong>WhatsApp:</strong> (11) 96666-7777</li>
+          <li>
+            <strong>Horário de Atendimento:</strong> Segunda a Sábado, das 10h
+            às 19h
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>&copy; 2026 Royal Drip Streetwear. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
