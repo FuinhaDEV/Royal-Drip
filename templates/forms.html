@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <h1>Formulário de Solicitação</h1>
+    <p>Preencha os campos e envie sua Solicitação</p>
+
+    <!--Action aponta para a rota Flask que recebera o formulario. -->
+    <!--method="post" informa que o formulário está enviando uma ação ao servidor.-->
+    <form action="/enviar" method="POST">
+      <!-- O label explica o campo e o atributo for se conecta ao id. -->
+      <label for="nome">Nome:</label>
+      <input
+        type="text"
+        id="nome"
+        name="nome"
+        placeholder="Digite seu nome"
+        required
+      />
+
+      <br /><br />
+
+      <label for="email">E-mail:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Digite seu e-mail"
+        required
+      />
+
+      <br /><br />
+
+      <label for="descricao">Descrição:</label>
+      <textarea
+        id="descricao"
+        name="descricao"
+        rows="5"
+        placeholder="Descreva a roupa..."
+      ></textarea>
+
+      <br /><br />
+
+      <label for="categoria">Categoria:</label>
+      <select id="categoria" name="categoria">
+        <option value="">Selecione uma categoria</option>
+        <option value="camiseta">Camiseta</option>
+        <option value="camisa">Camisa</option>
+        <option value="calca">Calça</option>
+        <option value="shorts">Shorts</option>
+        <option value="vestido">Vestido</option>
+        <option value="saia">Saia</option>
+        <option value="casaco">Casaco</option>
+        <option value="moletom">Moletom</option>
+      </select>
+
+      <br /><br />
+
+      <label for="tamanho">Tamanho:</label>
+      <select id="tamanho" name="tamanho">
+        <option value="">Selecione o tamanho</option>
+        <option value="PP">PP</option>
+        <option value="P">P</option>
+        <option value="M">M</option>
+        <option value="G">G</option>
+        <option value="GG">GG</option>
+        <option value="XGG">XGG</option>
+      </select>
+
+      <br /><br />
+
+      <label for="cor">Cor:</label>
+      <select id="cor" name="cor">
+        <option value="">Selecione a cor:</option>
+        <option value="preto">Preto</option>
+        <option value="branco">Branco</option>
+        <option value="azul">Azul</option>
+        <option value="vermelho">Vermelho</option>
+        <option value="verde">Verde</option>
+        <option value="rosa">Rosa</option>
+        <option value="amarelo">Amarelo</option>
+      </select>
+
+      <br /><br />
+
+      <label for="genero">Público:</label>
+      <select id="genero" name="genero">
+        <option value="">Selecione</option>
+        <option value="feminino">Feminino</option>
+        <option value="masculino">Masculino</option>
+        <option value="unissex">Unissex</option>
+      </select>
+
+      <br /><br />
+
+      <label for="preco">Preço:</label>
+      <input type="number" id="preco" name="preco" step="0.01" />
+
+      <br /><br />
+
+      <label for="estoque">Estoque:</label>
+      <input type="number" id="estoque" name="estoque" />
+
+      <br /><br />
+
+      <button type="submit">Cadastrar produto</button>
+
+      <br /><br />
+
+      <input type="radio" id="cor azul" name-="cor" values="azul" />
+      <label for="cor azul"></label>
+    </form>
+  </body>
+</html>
